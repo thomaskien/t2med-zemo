@@ -4,7 +4,7 @@
 
 `Rezeptkopf-ZEMO` ist ein virtueller Linux-Drucker für T2med. T2med druckt ein normales vollständiges Kassenrezept oder Grünes Rezept an einen hochwertigen PostScript-Drucker. Der lokale Dienst rendert zuerst die vollständige Seite hochauflösend, schneidet danach den vorgesehenen Rezeptkopf aus, optimiert die Darstellung für 203 dpi und sendet das Ergebnis direkt per Bluetooth-RFCOMM an einen **BIXOLON SPP-R200III**.
 
-Die Zielmedien sind **ZEMO 2189**: 50 mm Medienbreite im Drucker, 82 mm Etikettenlänge in Förderrichtung.
+Die Zielmedien sind [**ZEMO VML-GK Etiketten, Produktnummer 2189**](https://zemoshop.de/Zemo-VML-GK-Etiketten-fuer-mobiles-Arztbuero-60-Etiketten-Rolle/2189): 50 mm Medienbreite im Drucker, 82 mm Etikettenlänge in Förderrichtung. Eine Rolle enthält 60 Etiketten.
 
 ![BIXOLON SPP-R200III mit bedruckten ZEMO-2189-Etiketten](rezeptkopf-zemo-beispiel.jpg)
 
