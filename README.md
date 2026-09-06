@@ -16,6 +16,8 @@ Danach einfach das gewünschte Kassenrezept oder Grüne Rezept wie gewohnt in T2
 
 **Wichtig beim Grünen Rezept:** Kasse bzw. Krankenkasse, BSNR und LANR werden nicht auf das Etikett gedruckt.
 
+![T2med-Druckerzuordnung für Kassenrezepte mit Rezeptkopf-ZEMO](Screenshot_2026-09-06_12-51-00.png)
+
 ## Final bestätigte Konfiguration
 
 | Parameter | Wert |
