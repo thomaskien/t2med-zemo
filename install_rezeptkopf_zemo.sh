@@ -149,7 +149,7 @@ FORM_CROP_LEFT_PT=26.6
 FORM_CROP_TOP_PT=16.5
 
 # Leserichtung des Formularkopfs; zulässig sind ausschließlich 90 oder 270.
-FORM_ROTATION=90
+FORM_ROTATION=270
 
 # Qualitätsparameter
 RENDER_DPI=609
@@ -230,7 +230,7 @@ FORM_CROP_TOP_PT = float(os.getenv("FORM_CROP_TOP_PT", "16.5"))
 FORM_ROTATION = None
 if INPUT_MODE == "formularkopf":
     try:
-        FORM_ROTATION = int(os.getenv("FORM_ROTATION", "90"))
+        FORM_ROTATION = int(os.getenv("FORM_ROTATION", "270"))
     except ValueError as exc:
         raise RuntimeError(
             "Ungültige FORM_ROTATION; erwartet 90 oder 270"

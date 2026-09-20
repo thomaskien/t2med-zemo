@@ -48,7 +48,7 @@ Die queue-spezifische Verarbeitung ist:
 
 | Queue / Dienstmodus | Eingabe | Crop | Crop-Ursprung | Rotation |
 |---|---|---:|---:|---:|
-| `Formularkopf-ZEMO` / `formularkopf` | A4-Formularkopf aus `Strg` + `E` | 82 × 50 mm | links `26.6 pt`, oben `16.5 pt` | `90°` (konfigurierbar: `90`/`270`) |
+| `Formularkopf-ZEMO` / `formularkopf` | A4-Formularkopf aus `Strg` + `E` | 82 × 50 mm | links `26.6 pt`, oben `16.5 pt` | `270°` (konfigurierbar: `90`/`270`) |
 | `Rezeptkopf-ZEMO` / `rezept` | vollständige alte Rezeptseite | 50 × 82 mm | links `165.4961 pt`, oben `348.0000 pt` | 180° |
 
 Der Formularkopf-Crop ist ein fester, um die gemessene Inhaltsbox zentrierter Testwert (etwa 9,4 mm von links und 5,8 mm von oben); es findet keine automatische Inhalts- oder Bounding-Box-Erkennung statt. Die Rezeptkoordinaten beziehen sich unverändert auf die vom virtuellen **Generic PostScript Printer** erzeugte Letter-Seite mit 612 × 792 PostScript-Punkten.
@@ -215,7 +215,7 @@ Bei späteren Korrekturen immer das **fertig gedruckte Etikett so betrachten, wi
 Für den Formularkopf kann die Drehrichtung nach einem physischen Test ohne Codeänderung zwischen `90` und `270` umgestellt werden:
 
 ```text
-FORM_ROTATION=90
+FORM_ROTATION=270
 ```
 
 Andere Werte weist der Dienst zurück. Für den alten Rezeptmodus gilt weiterhin unverändert:
@@ -307,7 +307,7 @@ FORM_CROP_W_MM=82.0
 FORM_CROP_H_MM=50.0
 FORM_CROP_LEFT_PT=26.6
 FORM_CROP_TOP_PT=16.5
-FORM_ROTATION=90
+FORM_ROTATION=270
 
 RECIPE_CROP_W_MM=50.0
 RECIPE_CROP_H_MM=82.0
