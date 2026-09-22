@@ -1,3 +1,5 @@
 .DS_Store
 etikettendruck/
 IMG_4130.jpeg
+__pycache__/
+*.py[cod]

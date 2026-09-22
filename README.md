@@ -1,8 +1,34 @@
 # Rezeptkopf-ZEMO
 
+Für einen **Brother QL-800 per USB** gibt es den separaten Installer
+[`install_formularkopf_klebchen.sh`](install_formularkopf_klebchen.sh): nur der
+A4-Formularkopf (`Strg` + `E`), Druckername **`formularkopf-klebchen`**, 50- oder
+62-mm-Endlos-Klebeetiketten mit automatischem Schnitt, Samba-Freigabe und
+Bonjour-/IPP-Freigabe. Unterstützte Zielsysteme und Einrichtung stehen in
+[`FORMULARKOPF-KLEBCHEN.md`](FORMULARKOPF-KLEBCHEN.md).
+
+Für die weiße **62-mm-Endlosrolle DK-22205** auf dem Linux-Druckserver:
+
+```bash
+curl -fL https://raw.githubusercontent.com/thomaskien/t2med-zemo/main/install_formularkopf_klebchen.sh \
+  -o install_formularkopf_klebchen.sh
+sudo bash install_formularkopf_klebchen.sh --media-width 62
+```
+
+Der Installer fragt nach der **automatischen Abschaltung**. Vorgabe ist **aus**:
+Mit Enter bleibt der QL-800 eingeschaltet. Alternativ 10, 20, 30, 40, 50 oder
+60 Minuten beziehungsweise `beibehalten` wählen. Die Einstellung wird direkt im
+Drucker gespeichert und durch erneutes Auslesen geprüft. Ohne interaktive
+Eingabe gilt ebenfalls `aus`; für automatisierte Installationen gibt es
+`--auto-power-off off|10|20|30|40|50|60|keep`.
+
+Vor einem Update offene Aufträge dieser Queue abschließen oder gezielt löschen.
+Der Installer muss bis **„Fertig“** durchlaufen; er löst keinen Testdruck aus.
+
 ## Zweck
 
-Der Installer richtet **immer zwei virtuelle Linux-Drucker gleichzeitig** ein:
+Der BIXOLON-Installer `install_rezeptkopf_zemo.sh` richtet **immer zwei virtuelle
+Linux-Drucker gleichzeitig** ein:
 
 - `Rezeptkopf-ZEMO` verarbeitet wie bisher eine vollständige Kassenrezept- oder Grüne-Rezept-Seite mit der bewährten Crop-Geometrie.
 - `Formularkopf-ZEMO` verarbeitet den in T2med mit **`Strg` + `E`** erzeugten Formularkopf aus einer A4-Seite.
